@@ -1,6 +1,46 @@
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  // const[input, setInput] = useState('');
+  // const [number, setNumber] = useState('');
+  const [result, setResult] = useState('');
+  const [calc, setCalc] = useState('');
+  // const [operator, setOperator] = useState('');
+  const operators = ['+', '-', '*', '/', '.' ];
+
+  const updateDisplay=(value)=>{
+    if(
+      // the first means that an operator is pressed alone 
+      (operators.includes(value) && calc === '' ) ||
+      // here means that the operator is found and it is the last thing typed
+      (operators.includes(value) && operators.includes(calc.slice(-1)))
+    ){
+      return;
+    }
+    setCalc(calc + value);
+    if(!operators.includes(value)){
+      // eslint-disable-next-line no-eval
+      setResult(eval(calc  + value).toString());
+    }
+  }
+
+  const PrintResult = () =>{
+    setCalc(result);
+  }
+
+  const clearDisplay = () =>{
+    setCalc('');
+    setResult('');
+  }
+  const clearLast = () =>{
+    setCalc(calc.slice(0, -1));
+    if(calc.length<=1){
+      setResult('');
+    }
+  }
+
+
   const digits = [];
 
   const createDigits = () => {
@@ -13,22 +53,24 @@ function App() {
     <div className="App">
       <div className="calculator">
         <div className="display">
-          <span>(0)</span>0
+          {result ? <span>({result})</span> : ''}
+          {calc || 0}
         </div>
           <div className="operators">
-            <button>/</button>
-            <button>x</button>
-            <button>+</button>
-            <button>-</button>
-            <button>DEL</button>
+            <button onClick={() => updateDisplay("/")}>/</button>
+            <button onClick={() => updateDisplay("*")}>*</button>
+            <button onClick={() => updateDisplay("+")}>+</button>
+            <button onClick={() => updateDisplay("-")}>-</button>
+            <button onClick={clearLast}>DEL</button>
+            <button onClick={clearDisplay}>ClearAll</button>
           </div>
           <div className="digits">
               {createDigits().map((digit, index)=>{
-                return <button key={index}>{digit}</button>;
+                return <button key={index} onClick={() => updateDisplay(digit)}>{digit}</button>;
               })} 
-              <button>0</button>
-              <button>.</button>
-              <button>=</button>
+              <button onClick={() => updateDisplay("0")}>0</button>
+              <button onClick={() => updateDisplay(".")}>.</button>
+              <button onClick={PrintResult}>=</button>
             </div>  
       </div>
     </div>

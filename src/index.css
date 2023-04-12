@@ -28,7 +28,7 @@ body{
 .calculator{
     background-color: white;
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0px 2px 15px #aaaaaa;
@@ -75,7 +75,7 @@ button:hover{
 }
 
 .operators button{
-    width: calc(100% / 5);
+    width: calc(100% / 6);
     background-color: var(--primary);
     height: max-content;
 }
