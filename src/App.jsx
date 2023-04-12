@@ -49,7 +49,7 @@ function App() {
     <div className="App">
       <div className="calculator">
         <div className="display">
-          {result ? <span>({result})</span> : ''}
+          {result ? <span>({result})</span> : ''}&nbsp;
           {calc || 0}
         </div>
           <div className="operators">
@@ -58,7 +58,7 @@ function App() {
             <button onClick={() => updateDisplay("+")}>+</button>
             <button onClick={() => updateDisplay("-")}>-</button>
             <button onClick={clearLast}>DEL</button>
-            <button onClick={clearDisplay}>ClearAll</button>
+            <button onClick={clearDisplay}>All</button>
           </div>
           <div className="digits">
               {createDigits().map((digit, index)=>{

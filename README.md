@@ -2,7 +2,7 @@
 
 This is a simple calculator built with React.js. It performs basic arithmetic operations such as addition, subtraction, multiplication, and division.
 
-![Screenshot of React Calculator](/screenshot.png)
+<!-- ![Screenshot of React Calculator](/screenshot.png) -->
 
 ## Getting Started
 
@@ -10,7 +10,7 @@ To get started, you'll need to have Node.js and Git installed on your local mach
 
 1. Clone the repository using the following command:
 
-git clone https://github.com/your-username/react-calculator.git
+git clone https://github.com/your-username/Reactjs-Calculator.git
 
 
 2. Navigate to the [project directory](poe://www.poe.com/_api/key_phrase?phrase=project%20directory&prompt=Tell%20me%20more%20about%20project%20directory.) and install the dependencies:
@@ -45,9 +45,6 @@ The calculator has a simple interface with buttons for numbers and operators. To
 
 Contributions are welcome! If you find any bugs or have suggestions for new features, please create a new issue or submit a pull request.
 
-## License
-
-This project is licensed under the [MIT License](poe://www.poe.com/_api/key_phrase?phrase=MIT%20License&prompt=Tell%20me%20more%20about%20MIT%20License.) - see the [LICENSE](/LICENSE) file for details.
 
 ---
 

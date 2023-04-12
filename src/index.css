@@ -59,13 +59,8 @@ button{
     font-size: 20px;
     transition: 0.4s ease-in-out;
     font-weight: bold;
-    font-size: 18px;
-}
-
-button:hover{
-    background-color: #666060;
-    color: #131a26;
-    opacity: 0.8;
+    font-size: 20px;
+    text-align: center;
 }
 
 .operators{
@@ -88,3 +83,13 @@ button:hover{
 .digits button{
     background-color: var(--secondary);
 }
+
+button:hover{
+    color: #000000;
+    opacity: 0.8;
+}
+
+.digits button:hover{
+    background-color: #a5a392e8;
+}
+
