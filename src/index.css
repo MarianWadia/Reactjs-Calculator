@@ -1,0 +1,90 @@
+:root{
+    --primary: #d81e5b;
+    --secondary: #c6e0de;
+    --dark: #131a26;
+    --light: #eee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body{
+    background-color: var(--dark);
+}
+
+.App{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 16px;
+}
+
+.calculator{
+    background-color: white;
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 2px 15px #aaaaaa;
+}
+
+.display{
+    background-color: var(--secondary);
+    width: 100%;
+    padding: 16px;
+    text-align: right;
+    color: var(--dark);
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.display span{
+    font-size: 14px;
+    color: #888;
+}
+
+button{
+    border: none;
+    outline: none;
+    color: #fff;
+    appearance: none;
+    padding: 16px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.4s ease-in-out;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+button:hover{
+    background-color: #666060;
+    color: #131a26;
+    opacity: 0.8;
+}
+
+.operators{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.operators button{
+    width: calc(100% / 5);
+    background-color: var(--primary);
+    height: max-content;
+}
+
+.digits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.digits button{
+    background-color: var(--secondary);
+}
