@@ -10,7 +10,7 @@ To get started, you'll need to have Node.js and Git installed on your local mach
 
 1. Clone the repository using the following command:
 
-git clone https://github.com/your-username/Reactjs-Calculator.git
+git clone https://github.com/MarianWadia/Reactjs-Calculator.git
 
 
 2. Navigate to the [project directory](poe://www.poe.com/_api/key_phrase?phrase=project%20directory&prompt=Tell%20me%20more%20about%20project%20directory.) and install the dependencies:
@@ -35,6 +35,10 @@ The calculator has a simple interface with buttons for numbers and operators. To
 2. Click on the `=` button to perform the calculation.
 
 3. The result will be displayed on the calculator screen.
+
+4. Click on the `DEL` button to delete from the calculator character by character from last.
+
+5. Click on the `All` button to clear all in the calculator display.
 
 ## Built With
 
